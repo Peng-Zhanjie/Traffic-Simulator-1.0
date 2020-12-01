@@ -1,6 +1,5 @@
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.Test;
+import org.junit.Assert;
 
 class CarTest {
     Road road = new Road("0", 1, 5, new int[]{0, 0});
@@ -9,37 +8,37 @@ class CarTest {
     @Test
     void testMove() {
         car.move();
-        assertEquals(2, car.getPosition());
+        Assert.assertEquals(2, car.getPosition());
     }
 
     @Test
     void getLength() {
-        assertEquals(1, car.getLength());
+        Assert.assertEquals(1, car.getLength(),0);
     }
 
     @Test
     void getBreadth() {
-        assertEquals(0.5, car.getBreadth());
+        Assert.assertEquals(0.5, car.getBreadth(),0);
     }
 
     @Test
     void getSpeed() {
-        assertEquals(0, car.getSpeed());
+        Assert.assertEquals(0, car.getSpeed());
     }
 
     @Test
     void getPosition() {
-        assertEquals(1, car.getPosition());
+        Assert.assertEquals(1, car.getPosition());
     }
 
     @Test
     void getRoad() {
-        assertEquals(road, car.getCurrentRoad());
+        Assert.assertEquals(road, car.getCurrentRoad());
     }
 
     @Test
     void getId() {
-        assertEquals("car_0", car.getId());
+        Assert.assertEquals("car_0", car.getId());
     }
 
 }

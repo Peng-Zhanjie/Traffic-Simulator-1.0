@@ -1,23 +1,23 @@
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class MotorbikeTest {
     Motorbike bike = new Motorbike("0");
 
     @Test
     void getLength() {
-        assertEquals(0.5, bike.getLength());
+        Assert.assertEquals(0.5, bike.getLength(),0);
     }
 
     @Test
     void getId() {
-        assertEquals("bike_0", bike.getId());
+        Assert.assertEquals("bike_0", bike.getId());
     }
 
     @Test
     void testInheritance() {
-        assertEquals(0, bike.getSpeed());
-        assertEquals(1, bike.getPosition());
+        Assert.assertEquals(0, bike.getSpeed());
+        Assert.assertEquals(1, bike.getPosition());
     }
 }
