@@ -11,7 +11,11 @@ public class Taxi extends Car {
 
     public void getOffTaxi() {
         if(this.peopleOnTaxi<=0);
-        else this.peopleOnTaxi++;
+        else this.peopleOnTaxi--;
+    }
+
+    public int getPeople() {
+        return this.peopleOnTaxi;
     }
 
 }

@@ -24,13 +24,13 @@ class RoadTest {
     @Test
     void getStartLocation() {
         int[] expected = {0, 0};
-        Assert.assertEquals(expected, road.getStartLocation());
+        Assert.assertEquals(expected[0], road.getStartLocation()[0]);
     }
 
     @Test
     void getEndLocation() {
         int[] expected = {5, 0};
-        Assert.assertEquals(expected, road.getEndLocation());
+        Assert.assertEquals(expected[0], road.getEndLocation()[0]);
     }
 
     @Test
