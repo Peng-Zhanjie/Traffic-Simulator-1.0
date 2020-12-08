@@ -54,6 +54,12 @@ public class testCode {
         testTrafficLight.getState();
         testTrafficLight.testOperate();
 
+        //Test passerby in PasserbyTest class
+        PasserbyTest testPasserby=new PasserbyTest();
+        testPasserby.getId();
+        testPasserby.getLocation();
+        testPasserby.getIfTakeTaxi();
+
 
         List<Car> cars = new ArrayList<>();
         for (int i = 0; i < USERINPUT; i++){

@@ -16,9 +16,9 @@ public class Main {
 //        main.setLightSpawns(simController.nextInt());
 
         // set values for user inputs for prototype.
-        int roadSpawns = 2;
+        int roadSpawns = 3;
         int carSpawns = 1;
-        int lightSpawns = 1;
+        int lightSpawns = 2;
 
 
         //Create objects:
@@ -50,7 +50,7 @@ public class Main {
         System.out.println("\nTraffic Lights;");
         ArrayList<TrafficLight> lights = new ArrayList<>();
         for (int i = 0; i < lightSpawns; i++) {
-            lights.add(new TrafficLight(Integer.toString(i), roads.get(0))); // all created lights will begin on road_0.
+            lights.add(new TrafficLight(Integer.toString(i), roads.get(i))); // all created lights will begin on road_0.
             lights.get(i).printLightStatus();
         }
         System.out.println();
@@ -62,6 +62,11 @@ public class Main {
         roads.get(1).printRoadInfo();
         roads.get(0).getConnectedRoads().add(roads.get(1)); // connect road_0 to road_1
         System.out.println();
+
+        System.out.println("Settings:");
+        roads.get(2).setStartLocation(new int[]{roads.get(1).getLength() + 1, 0}); // place road_2 to a position at the end of road_1.
+        roads.get(2).printRoadInfo();
+        roads.get(1).getConnectedRoads().add(roads.get(2)); // connect road_1 to road_2
 
 
         //Simulation loop:

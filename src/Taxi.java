@@ -5,10 +5,12 @@ public class Taxi extends Car {
         length = super.getLength() * 1f;
     }
 
+    //People get on taxi
     public void getOnTaxi() {
         this.peopleOnTaxi++;
     }
 
+    //People get off taxi
     public void getOffTaxi() {
         if(this.peopleOnTaxi<=0);
         else this.peopleOnTaxi--;
