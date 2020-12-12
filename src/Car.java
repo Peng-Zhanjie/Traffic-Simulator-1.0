@@ -7,7 +7,7 @@ public class Car {
     private static float breadth;
     private int speed; //segments moved per turn
     private int position; // position on current road
-    private Road currentRoad; // current Road object
+    Road currentRoad; // current Road object
 
 
     public Car(String id, Road currentRoad) {

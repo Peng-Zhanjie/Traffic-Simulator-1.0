@@ -19,6 +19,7 @@ public class Main {
         int roadSpawns = 3;
         int carSpawns = 1;
         int lightSpawns = 2;
+        City city01=new City("01");
 
 
         //Create objects:
@@ -34,6 +35,7 @@ public class Main {
             int speedLimitInput = 1; // force speed limit to be 1 for prototype.
             roads.add(new Road(Integer.toString(i), speedLimitInput, lengthInput, new int[]{0, 0}));
         }
+
         System.out.println("\nRoads;");
         for (Road road : roads
         ) {
@@ -46,6 +48,7 @@ public class Main {
             cars.add(new Car(Integer.toString(i), roads.get(0))); // all created cars will begin on road_0.
             cars.get(i).printCarStatus();
         }
+        city01.carsOnCity=cars;//Cars on city
 
         System.out.println("\nTraffic Lights;");
         ArrayList<TrafficLight> lights = new ArrayList<>();
@@ -54,6 +57,8 @@ public class Main {
             lights.get(i).printLightStatus();
         }
         System.out.println();
+        city01.lightsOnCity=lights;//Traffic lights on city
+
 
 
         // set locations and connections:
@@ -68,6 +73,7 @@ public class Main {
         roads.get(2).printRoadInfo();
         roads.get(1).getConnectedRoads().add(roads.get(2)); // connect road_1 to road_2
 
+        city01.roadOnCity=roads;// Roads on city
 
         //Simulation loop:
         System.out.println("Simulation:");
@@ -76,12 +82,12 @@ public class Main {
         System.out.print("Set time scale in milliseconds:");
         int speedOfSim = simController.nextInt();
         int carsFinished = 0;
-        while (carsFinished < cars.size()) {
-            for (TrafficLight light : lights) {
+        while (carsFinished < city01.carsOnCity.size()) {
+            for (TrafficLight light : city01.lightsOnCity) {
                 light.operate(random.nextInt());
                 light.printLightStatus();
             }
-            for (Car car : cars) {
+            for (Car car : city01.carsOnCity) {
                 car.move();
                 car.printCarStatus();
                 if (car.getCurrentRoad().getConnectedRoads().isEmpty() && (car.getSpeed() == 0)) {

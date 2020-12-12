@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 
 public class Road {
-    private String id;
+    String id;
     private int speedLimit;
-    private int length;
+    int length;
     private int[] startLocation;
     private int[] endLocation;
     private ArrayList<Car> carsOnRoad = new ArrayList<>();
@@ -16,6 +16,9 @@ public class Road {
         this.length = length;
         this.startLocation = startLocation;
         this.endLocation = new int[]{this.length + this.startLocation[0], 0}; //only works for horizontal roads;
+    }
+
+    public Road() {
     }
 
 //    public void createCars(int carSpawns) {
