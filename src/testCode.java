@@ -46,6 +46,11 @@ public class testCode {
         testRoad.getCars();
         testRoad.getLights();
 
+        //Test Lane in RoadTest class
+        LaneTest testLane=new LaneTest();
+        testLane.getId();
+        testLane.getLength();
+
         //Test TrafficLight in TrafficLightTest class
         TrafficLightTest testTrafficLight=new TrafficLightTest();
         testTrafficLight.getId();

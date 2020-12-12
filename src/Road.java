@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Road {
     String id;
     private int speedLimit;
-    int length;
+    int length=2;
     private int[] startLocation;
     private int[] endLocation;
     private ArrayList<Car> carsOnRoad = new ArrayList<>();
