@@ -50,4 +50,10 @@ class RoadTest {
         ArrayList<Road> expected = new ArrayList<>();
         Assert.assertEquals(expected, road.getConnectedRoads());
     }
+
+    void getMinCarDistance(){
+        Assert.assertEquals(0,road.getMinCarDistance());
+    }
+
+
 }

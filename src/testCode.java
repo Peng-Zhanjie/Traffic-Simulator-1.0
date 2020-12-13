@@ -45,11 +45,13 @@ public class testCode {
         testRoad.getEndLocation();
         testRoad.getCars();
         testRoad.getLights();
+        testRoad.getMinCarDistance();
 
         //Test Lane in RoadTest class
         LaneTest testLane=new LaneTest();
         testLane.getId();
         testLane.getLength();
+        testLane.getLaneSet();
 
         //Test TrafficLight in TrafficLightTest class
         TrafficLightTest testTrafficLight=new TrafficLightTest();

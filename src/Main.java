@@ -73,7 +73,7 @@ public class Main {
         roads.get(2).printRoadInfo();
         roads.get(1).getConnectedRoads().add(roads.get(2)); // connect road_1 to road_2
 
-        city01.roadOnCity=roads;// Roads on city
+        city01.roadsOnCity=roads;// Roads on city
 
         //Simulation loop:
         System.out.println("Simulation:");

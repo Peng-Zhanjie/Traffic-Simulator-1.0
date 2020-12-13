@@ -4,7 +4,7 @@ import org.junit.Assert;
 
 
 class LaneTest {
-    Lane road = new Lane("0");
+    Lane road = new Lane("0",1);
 
     @Test
     void getId() {
@@ -14,6 +14,9 @@ class LaneTest {
     @Test
     void getLength() {
         Assert.assertEquals(1, road.getLength());
+    }
+    void getLaneSet() {
+        Assert.assertEquals(1, road.LaneSet);
     }
 
 }

@@ -103,4 +103,30 @@ public class Road {
     public void setConnectedRoads(ArrayList<Road> connectedRoads) {
         this.connectedRoads = connectedRoads;
     }
+
+    //get how many cars in the road
+    int getCars(){
+        int countCar = 0;
+        for(Car car : carsOnRoad){
+            countCar++;
+        }
+        return countCar;
+    }
+
+    //get min Car distance in the road
+    public int getMinCarDistance(){
+        int distance=0;
+        if(getCars()==0 || getCars()==1){
+            return distance;
+        }
+        else {
+            for(Car car1 : carsOnRoad){
+                for (Car car2 : carsOnRoad){
+                    int distance1=Math.abs(car1.getPosition()-car2.getPosition());
+                    if((distance1<=distance&&distance!=0)||(distance==0)){ distance=distance1;}
+                }
+            }
+            return distance;
+        }
+    }
 }
